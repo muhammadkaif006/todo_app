@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div style="padding-bottom:20px;width:100%;" class="container-fluid">
+  <div style="box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);width:70%;padding-bottom:20px;" class="container">
+  <div class="row">
+    <div class="colomn">
+      <div class="col-md-12">
+      <li style="padding:20px;" class="row">
+  <h4 style="text-shadow: 2px 2px 5px grey;">{{task.heading}}</h4>
+  <p><b>{{task.description}}</b></p>
+        <time><b>{{task.date}}</b></time>
+  <time><b>{{task.time}}</b></time>
+  <div>
+  <a style="box-shadow:2px 2px 5px green;" class="btn btn-success" href="{% url 'todo_app:update' task.id %}">Update</a>
+  <a style="box-shadow:2px 2px 5px red;" class="btn btn-danger" href="{% url 'todo_app:delete' task.id %}">Delete</a>
+  </div>
+</li>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+{% endblock %}

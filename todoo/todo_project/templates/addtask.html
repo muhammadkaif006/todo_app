@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div style="padding-top:20px;">
+    <div style="box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);width:50%;padding:10px" class="container">
+    <form method="post">
+    {% csrf_token %}
+    <label style="text-shadow:1px 1px 3px grey;"><h3><b>Heading</b></h3></label>
+        <div style="padding:10px;">
+                <input type="text" name="heading" placeholder="heading" style="box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"><br>
+        </div>
+    <label style="text-shadow:1px 1px 3px grey;"><h3><b>Description</b></h3></label>
+        <div style="padding:10px;">
+    <input style="box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" type="text" name="description" placeholder="description"><br>
+        </div>
+    <label style="text-shadow:1px 1px 3px grey;"><h3><b>Date</b></h3></label>
+              <div style="padding:10px;">
+    <input style="box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" type="date" name="date" placeholder="date"><br>
+        </div>
+    <label style="text-shadow:1px 1px 3px grey;"><h3><b>Time</b></h3></label>
+              <div style="padding:10px;">
+    <input style="box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" type="time" name="time" placeholder="time"><br>
+        </div>
+    <input class="btn btn-success" style="box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" type="submit" value="Add">
+
+</form>
+</div>
+</div>
+
+
+{% endblock %}
